@@ -10,7 +10,7 @@ function getPostslist() {
                 list += '<li>';
                 list += post.publication + ') ';
                 list += post.author + ' - ';
-                list += '<a href="/post.html?post=' + post.file + '">' + post.title + '</a>';
+                list += '<a href="/post.html?post=' + post.id + '">' + post.title + '</a>';
                 if (post.description.length > 0) {
                     var description = post.description;
                     if (description.length > 50) {
