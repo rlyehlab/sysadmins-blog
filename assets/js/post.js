@@ -11,11 +11,10 @@ function findGetParameter(parameterName) {
 }
 
 $(document).ready(function(){
-    postid = findGetParameter('post').replace(/([^a-zA-Z0-9\._-])/g, '');
-    console.log(postid);
+    postid = findGetParameter('post').replace(/([^a-zA-Z0-9_-])/g, '');
     if (postid.length > 0) {
         $.ajax({
-            url: '/posts/' + postid.split('.')[0] + '/' + postid,
+            url: '/posts/' + postid + '/' + postid + '.md',
             success: function(postdata) {
                 if (postdata.length > 0) {
                     var converter = new showdown.Converter({ghCompatibleHeaderId: true}),
