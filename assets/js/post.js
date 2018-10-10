@@ -1,17 +1,33 @@
 function findGetParameter(parameterName) {
+    // Throws URIError
     // https://stackoverflow.com/a/5448595/3626032
     var result = null,
         tmp = [];
     var items = location.search.substr(1).split("&");
     for (var index = 0; index < items.length; index++) {
         tmp = items[index].split("=");
-        if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+        if (tmp[0] === parameterName) {
+            result = decodeURIComponent(tmp[1]);
+            break;
+        }
     }
     return result;
 }
 
 $(document).ready(function(){
-    postid = findGetParameter('post').replace(/([^a-zA-Z0-9_-])/g, '');
+    try {
+        postid = findGetParameter('post');
+    } catch(e) {
+        errUnknown(e.toString());
+        return;
+    }
+
+    if (postid == null) {
+        err404();
+        return;
+    }
+
+    postid = postid.replace(/([^a-zA-Z0-9_-])/g, '');
     if (postid.length > 0) {
         $.ajax({
             url: '/posts/' + postid + '/' + postid + '.md',
@@ -27,7 +43,7 @@ $(document).ready(function(){
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) {
                 if (XMLHttpRequest.status == 0) {
-                    alert('Check Your Network.');
+                    errUnknown('Network error');
                 } else if (XMLHttpRequest.status == 404) {
                     err404();
                 } else if (XMLHttpRequest.status == 500) {
