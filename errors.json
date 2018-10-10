@@ -1,0 +1,14 @@
+{
+    "403": {
+        "title": "Access Denied",
+        "author": "root",
+        "description": "You are not allowed to see the post",
+        "file": "access-denied.md"
+    },
+    "404": {
+        "title": "Not Found",
+        "author": "root",
+        "description": "The post was not found",
+        "file": "not-found.md"
+    }
+}
