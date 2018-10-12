@@ -28,3 +28,16 @@ pre {
     padding: 0.1em;
     border-radius: 0.2em;
 }
+
+img {
+    /* .img-responsive */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    /**/
+    /* .center-block */
+    /*display: block;*/
+    margin-left: auto;
+    margin-right: auto;
+    /**/
+}
