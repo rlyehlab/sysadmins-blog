@@ -17,46 +17,15 @@ To create a post, simply write your thoughts in a markdown file and name it
 whatever you want. However, to keep an order of things, and to keep all of the
 post's assets along, a directory with the same name is used.
 
-There's no strict rule for naming, except that it can only contain alphanumeric
-characters, `-` and `_`. As a convention, it's preferred to name it with
-the publication date first followed by a slugyfied title, so that it's easier
-to view, find and read posts directly through git.
-
+Name the directory with the date followed by the slugyfied title of the post,
+and the same goes for the file name appending the `.md` extension.  
 Example: for a post named *A Nice Post* created on 9 October, 2018, the name
 would be `20181009-a-nice-post.md`, and it would be located at
-`posts/20181009-a-nice-post/20181009-a-nice-post.md`.  
-The *post id* is the file name without the `.md` extension, which for the
-example above would be `20181009-a-nice-post`.
+`posts/20181009-a-nice-post/20181009-a-nice-post.md`.
 
-All of the post assets, such as pictures, videos, files or whatever, should be
-located in the same dir, optionally in subdirectories as wanted (there's no
-further criteria).
+### The metadata
 
-### The Posts Metadata File
-
-There's no server API, no directory listing and no database here, so there's no
-way to actually retrieve the posts list (it could be done using GH API, but I
-didn't want to be tied to GH), so I opted for a simple metadata file:
-`posts.json`.  
-The file is a JSON list of JSON objects that defines and order the posts, so
-that the first post is the first object, which should be the newest one (this
-is reverse date ordering).  
-The object has the following values:
-
-* `id`: the post ID, which can be any string containing only alphanumeric
-  characters, `-` and `_`.
-* `title` the post title, which should conveniently be shorter than 25
-  characters (but there's no real limit).
-* `author`: the post author or author list, comma-separated.
-* `description`: a short post description which should be shorter than 50
-  characters and is ellipsed if it's longer.
-* `publication`: the post publication date, preferrably in ISO8601
-  (YYYY-MM-DD) format but it will be displayed as is.
-* `modification`: the post modification date, preferrably in ISO8601
-  (YYYY-MM-DD) format but it will be displayed as is (currently not
-  implemented).
-
-Continuing with the example, the JSON object for the post would be:
+Create a new JSON object for your post metadata, like in this example:
 
 ```json
 {
@@ -68,6 +37,23 @@ Continuing with the example, the JSON object for the post would be:
     "modification": "2018-10-09"
 }
 ```
+
+And add it to the top of the `posts.json` file:
+
+```json
+[
+    {
+        "id": "20181009-a-nice-post",
+        ...
+    },
+    {
+        ...
+    }
+]
+```
+
+Remember to validate the file before commiting:
+`cat posts.json | python -m json.tool`
 
 # FemtoBlog
 
@@ -122,6 +108,46 @@ So basically, the minimal HTML files would be:
     <script src="/assets/js/post.js" defer></script>
 </body>
 ```
+
+## Posts
+
+A post is a Makdown written text file in a directory under the `posts/`
+directory. Every post goes in its own subdirectoy with the same name.
+
+There's no strict rule for naming, except that it can only contain alphanumeric
+characters, `-` and `_`. As a convention, it's preferred to name it with
+the publication date first followed by a slugyfied title, so that it's easier
+to view, find and read posts directly through git.
+
+The *post id* is the file name without the `.md` extension.
+
+All of the post assets, such as pictures, videos, files or whatever, should be
+located in the same dir, optionally in subdirectories as wanted (there's no
+further criteria).
+
+### The Posts Metadata File
+
+There's no server API, no directory listing and no database here, so there's no
+way to actually retrieve the posts list (it could be done using GH API, but I
+didn't want to be tied to GH), so I opted for a simple metadata file:
+`posts.json`.  
+The file is a JSON list of JSON objects that defines and order the posts, so
+that the first post is the first object, which should be the newest one (this
+is reverse date ordering).  
+The object has the following values:
+
+* `id`: the post ID, which can be any string containing only alphanumeric
+  characters, `-` and `_`.
+* `title` the post title, which should conveniently be shorter than 25
+  characters (but there's no real limit).
+* `author`: the post author or author list, comma-separated.
+* `description`: a short post description which should be shorter than 50
+  characters and is ellipsed if it's longer.
+* `publication`: the post publication date, preferrably in ISO8601
+  (YYYY-MM-DD) format but it will be displayed as is.
+* `modification`: the post modification date, preferrably in ISO8601
+  (YYYY-MM-DD) format but it will be displayed as is (currently not
+  implemented).
 
 # License
 
