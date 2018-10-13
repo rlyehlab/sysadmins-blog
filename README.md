@@ -23,7 +23,13 @@ Example: for a post named *A Nice Post* created on 9 October, 2018, the name
 would be `20181009-a-nice-post.md`, and it would be located at
 `posts/20181009-a-nice-post/20181009-a-nice-post.md`.
 
-### The metadata
+### The Metadata
+
+You can use the helper script `metaedit.py` to populate the metadata for you,
+it just requires Python 3.5+. Run it as `./metaedit.py` or
+`python3 metaedit.py` and follow the indications.
+
+**Metadata by Hand**
 
 Create a new JSON object for your post metadata, like in this example:
 
@@ -65,7 +71,7 @@ Comprised by just two HTML files (the posts index and a post template), it uses
 JQuery/Ajax to retrieve the post content and ShowdownJS to convert it to HTML
 effortlessly.
 
-## Inner workings
+## Inner Workings
 
 The index shows a dinamically generated posts list, which is done parsing the
 posts metadata file, a JSON file containing a JSON list of JSON objects (you
