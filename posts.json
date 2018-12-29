@@ -1,5 +1,13 @@
 [
     {
+        "id": "20181229-matrix-outage",
+        "title": "Matrix outage",
+        "author": "saico",
+        "description": "",
+        "publication": "2018-12-29",
+        "modification": "2018-12-29"
+    },
+    {
         "id": "20181009-how-to-create-a-gateway",
         "title": "How to Create a Gateway Host",
         "author": "HacKan",
