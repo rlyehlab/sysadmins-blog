@@ -1,5 +1,13 @@
 [
     {
+        "id": "20190330-you-don-t-need-monitoring-when-you-have-healthchecker",
+        "title": "You Don't Need Monitoring When You Have HealthChecker",
+        "author": "HacKan",
+        "description": "Developing and deploying a very simple service health checker",
+        "publication": "2019-03-30",
+        "modification": "2019-03-30"
+    },
+    {
         "id": "2019120-saturday-afternoon-adventures-with-dokuwiki",
         "title": "Saturday afternoon adventures with Dokuwiki",
         "author": "HacKan",
