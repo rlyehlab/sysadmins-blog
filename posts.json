@@ -1,5 +1,13 @@
 [
     {
+        "id": "2019625-properly-signing-release-packages",
+        "title": "Properly Signing Release Packages",
+        "author": "HacKan",
+        "description": "An explanatory guide on how to sign a release package properly.",
+        "publication": "2019-6-25",
+        "modification": "2019-6-25"
+    },
+    {
         "id": "20190330-you-don-t-need-monitoring-when-you-have-healthchecker",
         "title": "You Don't Need Monitoring When You Have HealthChecker",
         "author": "HacKan",
