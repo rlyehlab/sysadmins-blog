@@ -1,11 +1,11 @@
 [
     {
-        "id": "2019625-properly-signing-release-packages",
+        "id": "20190625-properly-signing-release-packages",
         "title": "Properly Signing Release Packages",
         "author": "HacKan",
-        "description": "An explanatory guide on how to sign a release package properly.",
-        "publication": "2019-6-25",
-        "modification": "2019-6-25"
+        "description": "An explanatory guide on how to sign a release package properly",
+        "publication": "2019-06-25",
+        "modification": "2019-06-25"
     },
     {
         "id": "20190330-you-don-t-need-monitoring-when-you-have-healthchecker",
@@ -16,12 +16,12 @@
         "modification": "2019-03-30"
     },
     {
-        "id": "2019120-saturday-afternoon-adventures-with-dokuwiki",
+        "id": "20190120-saturday-afternoon-adventures-with-dokuwiki",
         "title": "Saturday afternoon adventures with Dokuwiki",
         "author": "HacKan",
-        "description": "About Dokuwiki, docker-compose, password hashes and more.",
-        "publication": "2019-1-20",
-        "modification": "2019-1-20"
+        "description": "About Dokuwiki, docker-compose, password hashes and more",
+        "publication": "2019-01-20",
+        "modification": "2019-01-20"
     },
     {
         "id": "20181229-matrix-outage",
