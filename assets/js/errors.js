@@ -10,11 +10,11 @@ function err505() {
 
 function errUnknown(err='') {
     $('#post').html('');
-    var errtext = '<p class="lead"><strong>Unknown Error</strong><br />Hmmm OK, this is weird. '
+    let errtext = '<p class="lead"><strong>Unknown Error</strong><br />Hmmm OK, this is weird.';
     if (err.length > 0) {
-        errtext += 'Here is what I know: ' + err;
+        errtext += ' Here is what I know: ' + err;
     } else {
-        errtext += 'I have no idea what happened!';
+        errtext += ' I have no idea what happened!';
     }
     errtext += '<br />Try again and if it repeats, please send us an email</p>';
     $('#error').removeClass('d-none').html(errtext);
