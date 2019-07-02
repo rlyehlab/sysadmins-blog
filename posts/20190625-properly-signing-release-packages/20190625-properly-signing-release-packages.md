@@ -44,5 +44,5 @@ gpg --sign --detach-sign --interactive --verbose --digest-algo sha512 -o {packag
 11. Optionally, check that all files are correct by downloading signatures and packages and verifying them all.
 
 
-*This post was originally published as a [Gist](https://gist.github.com/HacKanCuBa/6fabded3565853adebf3dd140e72d33e)*
+*This post was originally published as a [Gist](https://gist.github.com/HacKanCuBa/6fabded3565853adebf3dd140e72d33e)*.
 
