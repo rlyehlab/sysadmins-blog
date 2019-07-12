@@ -1,5 +1,13 @@
 [
     {
+        "id": "20190711-our-commitment-with-you",
+        "title": "Our commitment with you",
+        "author": "R'lyeh Sysadmins",
+        "description": "Privacy and security are primal to us so we are signing a commitment",
+        "publication": "2019-07-11",
+        "modification": "2019-07-11"
+    },
+    {
         "id": "20190625-properly-signing-release-packages",
         "title": "Properly Signing Release Packages",
         "author": "HacKan",
