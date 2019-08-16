@@ -8,4 +8,4 @@ For our surprise this process return with an error and the nginx service wont ge
 * At this point we had a broken server unable to upgrade, so we took the drastic measure to rebuild the server with slim debian and abandon alphine for good. 
 * At next day we create Aixi, new reverse proxy VM with slim debian. We migrate all the configurations on the new server and stop the old one (Clarion) to never be started again.
 * Then we add the new page and it's port and everythig goes smoothly.
-### Estimated downtime 1 hr.
+### Estimated downtime < 10 min.
