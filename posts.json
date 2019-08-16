@@ -1,5 +1,13 @@
 [
     {
+        "id": "20190815-clarion-outage",
+        "title": "Clarion outage",
+        "author": "saico",
+        "description": "problems we faced with our reverse proxy running on AlphineOS",
+        "publication": "2019-08-15",
+        "modification": "2019-08-15"
+    },
+    {
         "id": "20190815-Clarion-outage",
         "title": "Reverse Proxy outage",
         "author": "saico",
