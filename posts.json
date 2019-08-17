@@ -1,5 +1,13 @@
 [
     {
+        "id": "20190817-gitlab-0day",
+        "title": "gitlab-0day",
+        "author": "saico",
+        "description": "0 day fixed gitlab issue",
+        "publication": "2019-08-17",
+        "modification": "2019-08-17"
+    },
+    {
         "id": "20190815-clarion-outage",
         "title": "Clarion outage",
         "author": "saico",
